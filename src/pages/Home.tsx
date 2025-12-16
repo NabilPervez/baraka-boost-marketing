@@ -110,23 +110,27 @@ export default function Home() {
 
             {/* Emotional Hook Section */}
             <section className="py-20 bg-blue-50">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <div className="h-32 md:h-24 mb-12 flex items-center justify-center">
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 flex flex-col md:flex-row items-center justify-center gap-2">
-                            <span>Are You</span>
-                            <AnimatePresence mode='wait'>
-                                <motion.span
-                                    key={index}
-                                    initial={{ opacity: 0, y: 10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: -10 }}
-                                    transition={{ duration: 0.5 }}
-                                    className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-400 min-w-[280px]"
-                                >
-                                    {phrases[index]}
-                                </motion.span>
-                            </AnimatePresence>
-                        </h2>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <div className="min-h-[160px] md:min-h-[120px] mb-12 flex items-center justify-center">
+                        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-x-3 gap-y-2 items-center">
+                            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 md:text-right text-center">
+                                Are You
+                            </h2>
+                            <div className="flex items-center justify-center md:justify-start h-20 md:h-24">
+                                <AnimatePresence mode='wait'>
+                                    <motion.span
+                                        key={index}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, y: -20 }}
+                                        transition={{ duration: 0.5 }}
+                                        className="text-4xl sm:text-5xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-400 text-center md:text-left leading-tight"
+                                    >
+                                        {phrases[index]}
+                                    </motion.span>
+                                </AnimatePresence>
+                            </div>
+                        </div>
                     </div>
 
                     <div className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto space-y-6">
@@ -140,7 +144,7 @@ export default function Home() {
                             </p>
 
                             <p className="text-2xl font-bold text-gray-900">
-                                Baraka Boost is designed to help you regain control, build consistency, and reconnect with your faith—one small step at a time.
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500">Baraka Boost</span> is designed to help you regain control, build consistency, and reconnect with your faith—one small step at a time.
                             </p>
                         </div>
                     </div>
