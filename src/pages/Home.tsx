@@ -49,7 +49,7 @@ export default function Home() {
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500">One Habit at a Time</span>
                             </h1>
                             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                                Transform your life with Islamic and Atomic Habits. Built for Muslims with all levels of practice and improve using our unique gamification system.
+                                Empowering your spiritual journey through gamified habits, Quran journaling, and community connection. Build your Jannah, one good deed at a time.
                             </p>
 
                             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
@@ -149,8 +149,7 @@ export default function Home() {
                         {[
                             { label: "Active Users", value: "100+" },
                             { label: "Habits Tracked", value: "1k+" },
-                            { label: "Verses Journaled", value: "500+" },
-                            { label: "App Store Rating", value: "4.9/5" }
+                            { label: "Verses Journaled", value: "500+" }
                         ].map((stat, index) => (
                             <div key={index}>
                                 <div className="text-4xl font-bold mb-2 text-emerald-400">{stat.value}</div>

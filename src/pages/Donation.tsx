@@ -7,36 +7,38 @@ export default function Donation() {
         <div className="bg-white min-h-screen">
             {/* Hero */}
             <section className="bg-emerald-50 py-20 relative overflow-hidden">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-                    <motion.div
-                        initial={{ scale: 0.8, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        className="inline-block p-4 bg-emerald-100 rounded-full mb-6"
-                    >
-                        <Heart className="w-12 h-12 text-emerald-600 fill-current animate-pulse" />
-                    </motion.div>
-                    <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Support Open Source Sadaqah Jariyah</h1>
-                    <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
-                        Baraka Boost is built by the community, for the community. Your donations help us keep the app ad-free, develop new features, and translate content for Muslims worldwide.
-                    </p>
-
-                    <div className="bg-white p-6 rounded-2xl shadow-xl max-w-sm mx-auto transform hover:-translate-y-1 transition-transform duration-300">
-                        <h3 className="text-lg font-semibold text-gray-700 mb-2">Monthly Server Goal</h3>
-                        <div className="w-full bg-gray-100 rounded-full h-4 mb-4 overflow-hidden">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                        <div className="text-left">
                             <motion.div
-                                initial={{ width: 0 }}
-                                animate={{ width: "65%" }}
-                                transition={{ duration: 1.5, ease: "easeOut" }}
-                                className="bg-emerald-500 h-full rounded-full"
-                            ></motion.div>
+                                initial={{ scale: 0.8, opacity: 0 }}
+                                animate={{ scale: 1, opacity: 1 }}
+                                className="inline-block p-4 bg-emerald-100 rounded-full mb-6"
+                            >
+                                <Heart className="w-12 h-12 text-emerald-600 fill-current animate-pulse" />
+                            </motion.div>
+                            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Support Open Source Sadaqah Jariyah</h1>
+                            <p className="text-xl text-gray-600 mb-8">
+                                Baraka Boost is built by the community, for the community. Your donations help us keep the app ad-free, develop new features, and translate content for Muslims worldwide.
+                            </p>
                         </div>
-                        <div className="flex justify-between text-sm font-medium mb-6">
-                            <span className="text-emerald-600">$650 raised</span>
-                            <span className="text-gray-400">of $1,000 goal</span>
+
+                        <div className="bg-white p-8 rounded-2xl shadow-xl border border-emerald-100">
+                            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Choose an Amount</h3>
+                            <div className="grid grid-cols-2 gap-4 mb-8">
+                                {['$5', '$10', '$25', '$50'].map((amount) => (
+                                    <button
+                                        key={amount}
+                                        className="bg-white border border-gray-200 hover:border-emerald-500 hover:bg-emerald-50 text-xl font-bold text-gray-700 hover:text-emerald-700 py-4 rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                                    >
+                                        {amount}
+                                    </button>
+                                ))}
+                            </div>
+                            <Button size="lg" className="w-full shadow-emerald-200" icon={Heart}>
+                                Confirm Donation
+                            </Button>
                         </div>
-                        <Button size="lg" className="w-full shadow-emerald-200" icon={Heart}>
-                            Donate Now
-                        </Button>
                     </div>
                 </div>
 
@@ -80,25 +82,7 @@ export default function Donation() {
                 </div>
             </section>
 
-            {/* Donation Tiers */}
-            <section className="py-16 bg-gray-50 border-t border-gray-200">
-                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-2xl font-bold text-center text-gray-900 mb-10">Choose an Amount</h2>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        {['$5', '$10', '$25', '$50'].map((amount) => (
-                            <button
-                                key={amount}
-                                className="bg-white border border-gray-200 hover:border-emerald-500 hover:bg-emerald-50 text-xl font-bold text-gray-700 hover:text-emerald-700 py-6 rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                            >
-                                {amount}
-                            </button>
-                        ))}
-                    </div>
-                    <div className="mt-8 text-center">
-                        <Button size="lg" className="px-12">Confirm Donation</Button>
-                    </div>
-                </div>
-            </section>
+
         </div>
     );
 }
