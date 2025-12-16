@@ -42,7 +42,7 @@ export default function Home() {
                         >
                             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-800 font-medium text-sm mb-6">
                                 <Star className="w-4 h-4 mr-2 fill-blue-600" />
-                                Islamic Atomic Habit Builder Gamified
+                                Gamified Islamic Atomic Habit Building App
                             </div>
                             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight leading-tight">
                                 Get Closer To Allah <br />
@@ -91,6 +91,45 @@ export default function Home() {
                 </div>
             </section>
 
+            {/* Emotional Hook Section */}
+            <section className="py-20 bg-blue-50">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <div className="space-y-6 mb-12">
+                        <h2 className="text-3xl font-bold text-gray-900">Are you not getting the most out of your time?</h2>
+                        <h2 className="text-3xl font-bold text-gray-900">Are you struggling with praying on time?</h2>
+                        <h2 className="text-3xl font-bold text-gray-900">Are you missing the fundamentals of your faith?</h2>
+                    </div>
+                    <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                        We understand how difficult it can be to balance life in this dunya while trying to build your akhira. The distractions of the modern world make it harder than ever to stay consistent. But you don't have to do it alone. Baraka Boost is designed to help you regain control, build consistency, and reconnect with your faith—one small step at a time.
+                    </p>
+                </div>
+            </section>
+
+            {/* Introduction Section */}
+            <section className="py-20 bg-white">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                        <div className="mb-12 lg:mb-0">
+                            <h2 className="text-3xl font-bold text-gray-900 mb-6">What Is Baraka Boost?</h2>
+                            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                                Baraka Boost is your comprehensive digital companion for spiritual growth. We've combined the powerful principles of "Atomic Habits" with Islamic teachings to create a system that works for the modern Muslim.
+                            </p>
+                            <p className="text-lg text-gray-600 leading-relaxed">
+                                Whether you want to establish your 5 daily prayers, memorize more Quran, or simply learn the basics of your deen, Baraka Boost provides the structure, motivation, and tools you need to succeed.
+                            </p>
+                        </div>
+                        <div className="relative">
+                            <div className="absolute inset-0 bg-blue-100 rounded-2xl transform rotate-3"></div>
+                            <img
+                                src="/images/mosque_hero.jpg"
+                                alt="Baraka Boost App"
+                                className="relative rounded-2xl shadow-xl w-full object-cover h-64 lg:h-auto"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Features Section */}
             <section id="features" className="py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -128,8 +167,8 @@ export default function Home() {
             <section className="py-20 bg-gradient-to-r from-blue-600 to-teal-500 text-white relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')] opacity-10"></div>
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-                    <h3 className="text-2xl md:text-3xl font-bold leading-relaxed">
-                        "Built by a Muslim Marketing Executive with previous clients of the largest names in gaming and entertainment."
+                    <h3 className="text-2xl md:text-3xl font-bold leading-relaxed italic">
+                        "The most beloved deeds to Allah are those that are done regularly, even if they are small"
                     </h3>
                 </div>
             </section>
@@ -138,9 +177,9 @@ export default function Home() {
             <section className="py-20 bg-gray-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Trying to get 1% better every day</h2>
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Improve 1% Everyday</h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            Within the app we give you tools to practice like Quran Recitation and Learning the Basics Of Islam, helping you improve in every aspect of your life.
+                            Track your consistency and watch your improved spirituality with broken-down analytics. We help you measure your progress so you can see your growth across:
                         </p>
                     </div>
 
