@@ -19,7 +19,7 @@ export default function Donation() {
                             </motion.div>
                             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Support Open Source Sadaqah Jariyah</h1>
                             <p className="text-xl text-gray-600 mb-8">
-                                Baraka Boost is built by the community, for the community. Your donations help us keep the app ad-free, develop new features, and translate content for Muslims worldwide.
+                                Baraka Boost is built by the community, for the community. Your donations help us keep the app running, develop new features, and generate content for Muslims worldwide.
                             </p>
                         </div>
 
