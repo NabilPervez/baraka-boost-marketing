@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Smartphone, CheckCircle, Star, Moon, Book, Mic, GraduationCap, Apple, DollarSign } from 'lucide-react';
+import { Smartphone, CheckCircle, Star, Book, Mic, GraduationCap, Apple, DollarSign } from 'lucide-react';
 import Button from '../components/Button';
 
 export default function Home() {
