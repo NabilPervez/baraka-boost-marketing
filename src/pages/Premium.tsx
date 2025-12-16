@@ -56,9 +56,9 @@ export default function Premium() {
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.2 }}
-                        className="bg-blue-900 text-white p-8 md:p-10 rounded-3xl shadow-2xl relative overflow-hidden"
+                        className="bg-gradient-to-br from-blue-600 to-teal-500 text-white p-8 md:p-10 rounded-3xl shadow-2xl relative overflow-hidden"
                     >
-                        <div className="absolute top-0 right-0 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                        <div className="absolute top-0 right-0 bg-white text-blue-600 text-xs font-bold px-3 py-1 rounded-bl-lg shadow-sm">
                             MOST POPULAR
                         </div>
 
@@ -73,8 +73,8 @@ export default function Premium() {
                         <ul className="space-y-4 mb-10">
                             {benefits.map((item, i) => (
                                 <li key={i} className="flex items-center text-blue-50">
-                                    <div className="bg-blue-800 rounded-full p-1 mr-3">
-                                        <Check className="w-3 h-3 text-blue-300" />
+                                    <div className="bg-white/20 rounded-full p-1 mr-3 backdrop-blur-sm">
+                                        <Check className="w-3 h-3 text-white" />
                                     </div>
                                     {item}
                                 </li>
@@ -84,7 +84,7 @@ export default function Premium() {
                         <Button
                             variant="primary"
                             size="lg"
-                            className="w-full bg-blue-400 text-blue-900 hover:bg-blue-300 shadow-lg shadow-blue-900/50"
+                            className="w-full bg-white text-blue-600 hover:bg-blue-50 shadow-lg shadow-blue-900/20"
                             icon={Star}
                         >
                             Subscribe Now
