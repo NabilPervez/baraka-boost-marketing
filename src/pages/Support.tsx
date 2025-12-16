@@ -20,8 +20,8 @@ export default function Support() {
                         <p className="text-gray-600 mb-6">
                             Send us an email and we'll get back to you within 24 hours.
                         </p>
-                        <a href="mailto:support@barakaboost.com" className="text-blue-600 font-semibold hover:underline">
-                            support@barakaboost.com
+                        <a href="mailto:nabilpervezconsulting+barakaboostsupport@gmail.com" className="text-blue-600 font-semibold hover:underline">
+                            nabilpervezconsulting+barakaboostsupport@gmail.com
                         </a>
                     </div>
 

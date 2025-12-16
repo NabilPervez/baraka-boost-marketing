@@ -46,7 +46,7 @@ export default function Premium() {
                             ))}
                         </ul>
 
-                        <Button variant="outline" className="w-full" href="/">Download Free</Button>
+                        <Button variant="outline" className="w-full" href="/sign-up">Sign Up Now</Button>
                     </motion.div>
 
                     {/* Premium Plan */}
@@ -80,6 +80,7 @@ export default function Premium() {
                         </ul>
 
                         <Button
+                            href="https://buy.stripe.com/fZubJ2gm5cfm1o2dkC6EU00"
                             variant="primary"
                             size="lg"
                             className="w-full bg-white text-blue-600 hover:bg-blue-50 shadow-lg shadow-blue-900/20"
@@ -97,7 +98,7 @@ export default function Premium() {
                 {/* Comparison or FAQ could go here */}
                 <div className="mt-24 text-center">
                     <p className="text-gray-500">
-                        Need help choosing? <a href="mailto:support@barakaboost.com" className="text-blue-600 font-medium underline">Contact our support team</a>
+                        Need help choosing? <a href="mailto:nabilpervezconsulting+barakaboostsupport@gmail.com" className="text-blue-600 font-medium underline">Contact our support team</a>
                     </p>
                 </div>
             </div>

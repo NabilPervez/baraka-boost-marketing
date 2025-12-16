@@ -113,11 +113,11 @@ export default function Home() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <div className="min-h-[160px] md:min-h-[120px] mb-12 flex items-center justify-center">
                         <div className="flex flex-col md:flex-row items-center justify-center gap-x-3 gap-y-2">
-                            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 text-center flex gap-3">
-                                <span>Are You</span>
-                                <span className="text-red-500">Struggling To</span>
-                            </h2>
-                            <div className="flex items-center justify-center h-20 md:h-24 overflow-hidden">
+                            <div className="flex items-center justify-end gap-3 md:w-1/2 text-right">
+                                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900">Are You</h2>
+                                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-red-500">Struggling To</h2>
+                            </div>
+                            <div className="flex items-center justify-start md:w-1/2 text-left h-20 md:h-24 overflow-hidden">
                                 <AnimatePresence mode='wait'>
                                     <motion.span
                                         key={index}
@@ -125,7 +125,7 @@ export default function Home() {
                                         animate={{ opacity: 1, y: 0 }}
                                         exit={{ opacity: 0, y: 50 }}
                                         transition={{ duration: 0.5, ease: "backOut" }}
-                                        className="text-4xl sm:text-5xl lg:text-6xl font-bold text-red-500 text-center leading-tight block"
+                                        className="text-4xl sm:text-5xl lg:text-6xl font-bold text-red-500 leading-tight block whitespace-nowrap"
                                     >
                                         {phrases[index]}
                                     </motion.span>
@@ -276,7 +276,7 @@ export default function Home() {
             <section className="py-20 bg-gray-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Improve 1% Everyday</h2>
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Improve 1% <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500">Everyday</span></h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                             Track your consistency and watch your improved spirituality with broken-down analytics. We help you measure your progress so you can see your growth across:
                         </p>
