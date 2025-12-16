@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { CheckCircle, Star, Book, Mic, GraduationCap, DollarSign } from 'lucide-react';
+import { CheckCircle, Star, Book, Mic, GraduationCap, DollarSign, Activity, Heart, Brain, Zap, Layers, BarChart3 } from 'lucide-react';
 import Button from '../components/Button';
 
 export default function Home() {
@@ -49,7 +49,7 @@ export default function Home() {
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500">One Habit at a Time</span>
                             </h1>
                             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                                Empowering your spiritual journey through gamified habits, Quran journaling, and community connection. Build your Jannah, one good deed at a time.
+                                Empowering your spiritual journey through gamified habits, Quran repetition, and Islamic bullet journaling. Build a better you, one good deed at a time.
                             </p>
 
                             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
@@ -127,17 +127,95 @@ export default function Home() {
             {/* Social Proof / Stats */}
             <section className="py-20 bg-gradient-to-r from-blue-600 to-teal-500 text-white relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')] opacity-10"></div>
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                    <h3 className="text-2xl md:text-3xl font-bold leading-relaxed">
+                        "Built by a Muslim Marketing Executive with previous clients of the largest names in gaming and entertainment."
+                    </h3>
+                </div>
+            </section>
+
+            {/* Improvements Section */}
+            <section className="py-20 bg-gray-50">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Trying to get 1% better every day</h2>
+                        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                            Within the app we give you tools to practice like Quran Recitation and Learning the Basics Of Islam, helping you improve in every aspect of your life.
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {[
-                            { label: "Active Users", value: "100+" },
-                            { label: "Habits Tracked", value: "1k+" },
-                            { label: "Verses Journaled", value: "500+" }
-                        ].map((stat, index) => (
-                            <div key={index}>
-                                <div className="text-4xl font-bold mb-2 text-white">{stat.value}</div>
-                                <div className="text-blue-100">{stat.label}</div>
-                            </div>
+                            { icon: Activity, title: "Physically", color: "text-red-500", bg: "bg-red-50" },
+                            { icon: Zap, title: "Spiritually", color: "text-amber-500", bg: "bg-amber-50" },
+                            { icon: Heart, title: "Emotionally", color: "text-pink-500", bg: "bg-pink-50" },
+                            { icon: Brain, title: "Mentally", color: "text-indigo-500", bg: "bg-indigo-50" }
+                        ].map((item, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1 }}
+                                className={`p-6 rounded-2xl ${item.bg} text-center hover:shadow-lg transition-all duration-300`}
+                            >
+                                <div className={`w-16 h-16 mx-auto rounded-full bg-white shadow-sm flex items-center justify-center mb-4 ${item.color}`}>
+                                    <item.icon size={32} />
+                                </div>
+                                <h3 className="text-xl font-bold text-gray-900">{item.title}</h3>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* How It Works Section */}
+            <section className="py-20 bg-white">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">How to Use Baraka Boost</h2>
+                        <p className="text-xl text-gray-600">Start your journey in three simple steps</p>
+                    </div>
+
+                    <div className="relative grid md:grid-cols-3 gap-8">
+                        {/* Connecting Line (Desktop) */}
+                        <div className="hidden md:block absolute top-12 left-1/6 right-1/6 h-0.5 bg-gray-200 -z-10"></div>
+
+                        {[
+                            {
+                                step: "Step 1",
+                                title: "Choose Your Habits To Stack",
+                                icon: Layers,
+                                description: "Select from our curated list of sunnah habits or create your own custom routine."
+                            },
+                            {
+                                step: "Step 2",
+                                title: "Check In For Prayer",
+                                icon: CheckCircle,
+                                description: "Log your daily prayers and mark off the habits you've successfully completed."
+                            },
+                            {
+                                step: "Step 3",
+                                title: "Monitor Your Growth",
+                                icon: BarChart3,
+                                description: "Track your consistency and watch your improved spirituality with broken-down analytics."
+                            }
+                        ].map((item, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.2 }}
+                                className="relative bg-white pt-8 px-6 pb-6 text-center"
+                            >
+                                <div className="w-24 h-24 mx-auto bg-blue-600 rounded-full flex items-center justify-center text-white shadow-lg mb-6 border-4 border-white">
+                                    <item.icon size={40} />
+                                </div>
+                                <div className="text-sm font-bold text-blue-600 mb-2 uppercase tracking-wide">{item.step}</div>
+                                <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
+                                <p className="text-gray-600">{item.description}</p>
+                            </motion.div>
                         ))}
                     </div>
                 </div>
@@ -148,7 +226,7 @@ export default function Home() {
                 <div className="max-w-4xl mx-auto px-4 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Start Your Journey Today</h2>
                     <p className="text-xl text-gray-600 mb-10">
-                        Join thousands of Muslims around the world who are transforming their lives with Baraka Boost.
+                        Join Muslims around the world who are transforming their lives with Baraka Boost.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
                         <Button size="lg" href="/sign-up" icon={Star}>

@@ -7,9 +7,7 @@ export default function Premium() {
         "Unlimited Habit Tracking",
         "Advanced Analytics & Insights",
         "Cloud Sync Across Devices",
-        "Exclusive Quran Journal Themes",
-        "Priority Customer Support",
-        "Ad-Free Experience"
+        "Priority Customer Support"
     ];
 
     return (
@@ -67,7 +65,7 @@ export default function Premium() {
                             <h3 className="text-2xl font-bold text-white">Premium</h3>
                         </div>
 
-                        <div className="text-5xl font-bold text-white mb-6">$4.99<span className="text-lg text-blue-200 font-normal">/month</span></div>
+                        <div className="text-5xl font-bold text-white mb-6">$5<span className="text-lg text-blue-200 font-normal">/month</span></div>
                         <p className="text-blue-100 mb-8">Supercharge your productivity and spiritual growth.</p>
 
                         <ul className="space-y-4 mb-10">

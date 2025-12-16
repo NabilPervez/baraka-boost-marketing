@@ -42,8 +42,8 @@ export default function SignUp() {
         },
         {
             icon: Book,
-            title: "Digital Quran Journal",
-            description: "A beautiful space to reflect on verses and connect deeper with the Quran."
+            title: "Digital Islamic Bullet Journal",
+            description: "A beautiful space to reflect on verses and connect deeper with Islam."
         },
         {
             icon: Mic,
