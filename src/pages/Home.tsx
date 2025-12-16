@@ -111,26 +111,23 @@ export default function Home() {
             {/* Emotional Hook Section */}
             <section className="py-20 bg-blue-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <div className="min-h-[160px] md:min-h-[120px] mb-12 flex items-center justify-center">
-                        <div className="flex flex-col md:flex-row items-center justify-center gap-x-3 gap-y-2">
-                            <div className="flex items-center justify-end gap-3 md:w-1/2 text-right">
-                                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900">Are You</h2>
-                                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-red-500">Struggling To</h2>
-                            </div>
-                            <div className="flex items-center justify-start md:w-1/2 text-left h-20 md:h-24 overflow-hidden">
-                                <AnimatePresence mode='wait'>
-                                    <motion.span
-                                        key={index}
-                                        initial={{ opacity: 0, y: -50 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        exit={{ opacity: 0, y: 50 }}
-                                        transition={{ duration: 0.5, ease: "backOut" }}
-                                        className="text-4xl sm:text-5xl lg:text-6xl font-bold text-red-500 leading-tight block whitespace-nowrap"
-                                    >
-                                        {phrases[index]}
-                                    </motion.span>
-                                </AnimatePresence>
-                            </div>
+                    <div className="min-h-[160px] md:min-h-[120px] mb-12 flex flex-col items-center justify-center">
+                        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-2">Are You</h2>
+                        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-red-500 mb-4">Struggling To</h2>
+
+                        <div className="h-20 md:h-24 overflow-hidden flex items-center justify-center relative w-full">
+                            <AnimatePresence mode='wait'>
+                                <motion.span
+                                    key={index}
+                                    initial={{ opacity: 0, x: -50 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    exit={{ opacity: 0, x: 50 }}
+                                    transition={{ duration: 0.5, ease: "circOut" }}
+                                    className="text-4xl sm:text-5xl lg:text-6xl font-bold text-red-500 leading-tight block whitespace-nowrap absolute"
+                                >
+                                    {phrases[index]}
+                                </motion.span>
+                            </AnimatePresence>
                         </div>
                     </div>
 

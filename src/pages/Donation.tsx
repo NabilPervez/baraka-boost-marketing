@@ -26,18 +26,23 @@ export default function Donation() {
                         <div className="bg-white p-8 rounded-2xl shadow-xl border border-blue-100">
                             <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Choose an Amount</h3>
                             <div className="grid grid-cols-2 gap-4 mb-8">
-                                {['$5', '$10', '$25', '$50'].map((amount) => (
-                                    <button
-                                        key={amount}
-                                        className="bg-white border border-gray-200 hover:border-blue-500 hover:bg-blue-50 text-xl font-bold text-gray-700 hover:text-blue-700 py-4 rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                {[
+                                    { amount: '$5', link: 'https://buy.stripe.com/cNi9AU8TD3IQgiW5Sa6EU01' },
+                                    { amount: '$10', link: 'https://buy.stripe.com/4gM6oI0n7fryd6K2FY6EU02' },
+                                    { amount: '$20', link: 'https://buy.stripe.com/eVq5kEc5P0wE5Ei3K26EU03' },
+                                    { amount: '$50', link: 'https://buy.stripe.com/3cIeVed9T5QY6Im80i6EU04' }
+                                ].map((item) => (
+                                    <Button
+                                        key={item.amount}
+                                        href={item.link}
+                                        variant='outline'
+                                        className="bg-white border-2 border-gray-200 hover:border-blue-500 hover:bg-blue-50 text-xl font-bold text-gray-700 hover:text-blue-700 py-4 h-auto rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                     >
-                                        {amount}
-                                    </button>
+                                        {item.amount}
+                                    </Button>
                                 ))}
                             </div>
-                            <Button size="lg" className="w-full shadow-blue-200" icon={Heart}>
-                                Confirm Donation
-                            </Button>
+
                         </div>
                     </div>
                 </div>
