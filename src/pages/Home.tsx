@@ -1,8 +1,25 @@
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from 'react';
 import { CheckCircle, Star, Book, Mic, GraduationCap, DollarSign, Activity, Heart, Brain, Zap, Layers, BarChart3 } from 'lucide-react';
 import Button from '../components/Button';
 
 export default function Home() {
+    const [index, setIndex] = useState(0);
+
+    const phrases = [
+        "Trying to Improve Your Life?",
+        "Building Good Habits?",
+        "Missing Your Prayers?",
+        "Struggling To Understand Islam?",
+        "Feeling Disconnected From Allah?"
+    ];
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setIndex((prev) => (prev + 1) % phrases.length);
+        }, 3000);
+        return () => clearInterval(interval);
+    }, []);
     const features = [
         {
             icon: CheckCircle,
@@ -94,14 +111,39 @@ export default function Home() {
             {/* Emotional Hook Section */}
             <section className="py-20 bg-blue-50">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <div className="space-y-6 mb-12">
-                        <h2 className="text-3xl font-bold text-gray-900">Are you not getting the most out of your time?</h2>
-                        <h2 className="text-3xl font-bold text-gray-900">Are you struggling with praying on time?</h2>
-                        <h2 className="text-3xl font-bold text-gray-900">Are you missing the fundamentals of your faith?</h2>
+                    <div className="h-32 md:h-24 mb-12 flex items-center justify-center">
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 flex flex-col md:flex-row items-center justify-center gap-2">
+                            <span>Are You</span>
+                            <AnimatePresence mode='wait'>
+                                <motion.span
+                                    key={index}
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -10 }}
+                                    transition={{ duration: 0.5 }}
+                                    className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-400 min-w-[280px]"
+                                >
+                                    {phrases[index]}
+                                </motion.span>
+                            </AnimatePresence>
+                        </h2>
                     </div>
-                    <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                        We understand how difficult it can be to balance life in this dunya while trying to build your akhira. The distractions of the modern world make it harder than ever to stay consistent. But you don't have to do it alone. Baraka Boost is designed to help you regain control, build consistency, and reconnect with your faith—one small step at a time.
-                    </p>
+
+                    <div className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto space-y-6">
+                        <p>
+                            We understand how difficult it can be to balance life in this dunya while trying to build your akhira. The distractions of the modern world make it harder than ever to stay consistent.
+                        </p>
+
+                        <div className="space-y-4 pt-4">
+                            <p className="text-2xl font-medium text-gray-800 italic">
+                                But you don't have to do it alone.
+                            </p>
+
+                            <p className="text-2xl font-bold text-gray-900">
+                                Baraka Boost is designed to help you regain control, build consistency, and reconnect with your faith—one small step at a time.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
