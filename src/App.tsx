@@ -7,6 +7,7 @@ import ScrollToTop from './components/ScrollToTop';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import Support from './pages/Support';
+import SignUp from './pages/SignUp';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/support" element={<Support />} />
+          <Route path="/sign-up" element={<SignUp />} />
         </Routes>
       </Layout>
     </Router>

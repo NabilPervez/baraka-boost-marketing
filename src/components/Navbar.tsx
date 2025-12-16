@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Smartphone, Heart, Zap } from 'lucide-react';
+import { Menu, X, Star, Heart, Zap } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Navbar() {
@@ -50,13 +50,13 @@ export default function Navbar() {
                                 <span>{link.name}</span>
                             </Link>
                         ))}
-                        <a
-                            href="https://play.google.com/store/apps" // Placeholder
+                        <Link
+                            to="/sign-up"
                             className="px-4 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 flex items-center space-x-2"
                         >
-                            <Smartphone size={18} />
-                            <span>Get App</span>
-                        </a>
+                            <Star size={18} />
+                            <span>Early Access</span>
+                        </Link>
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -95,12 +95,13 @@ export default function Navbar() {
                                     <span>{link.name}</span>
                                 </Link>
                             ))}
-                            <a
-                                href="https://play.google.com/store/apps"
+                            <Link
+                                to="/sign-up"
+                                onClick={() => setIsOpen(false)}
                                 className="block w-full text-center mt-4 px-4 py-3 bg-blue-600 text-white rounded-lg font-medium"
                             >
-                                Download Now On Android
-                            </a>
+                                Get Early Access
+                            </Link>
                         </div>
                     </motion.div>
                 )}

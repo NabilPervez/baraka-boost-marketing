@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Smartphone, CheckCircle, Star, Book, Mic, GraduationCap, Apple, DollarSign } from 'lucide-react';
+import { CheckCircle, Star, Book, Mic, GraduationCap, DollarSign } from 'lucide-react';
 import Button from '../components/Button';
 
 export default function Home() {
@@ -54,29 +54,12 @@ export default function Home() {
 
                             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
                                 <Button
-                                    href="https://play.google.com/store/apps"
+                                    href="/sign-up"
                                     size="lg"
-                                    icon={Smartphone}
+                                    icon={Star}
                                     className="w-full sm:w-auto"
                                 >
-                                    Download Now On Android
-                                </Button>
-                                <Button
-                                    href="#"
-                                    size="lg"
-                                    icon={Apple}
-                                    variant="outline"
-                                    className="w-full sm:w-auto cursor-not-allowed opacity-75"
-                                >
-                                    iOS Coming Soon
-                                </Button>
-                                <Button
-                                    variant="outline"
-                                    href="#features"
-                                    size="lg"
-                                    className="w-full sm:w-auto"
-                                >
-                                    View Features
+                                    Sign Up For Exclusive Early Access
                                 </Button>
                             </div>
 
@@ -168,8 +151,8 @@ export default function Home() {
                         Join thousands of Muslims around the world who are transforming their lives with Baraka Boost.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
-                        <Button size="lg" href="https://play.google.com/store/apps" icon={Smartphone}>
-                            Download Now On Android
+                        <Button size="lg" href="/sign-up" icon={Star}>
+                            Sign Up For Exclusive Early Access
                         </Button>
                         <Button size="lg" variant="secondary" href="/premium" icon={Star}>
                             Get Premium Features
