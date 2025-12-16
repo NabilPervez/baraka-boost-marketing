@@ -3,15 +3,35 @@ import { motion } from 'framer-motion';
 import { CheckCircle, Book, Mic, Star, ArrowRight, Mail } from 'lucide-react';
 import Button from '../components/Button';
 
+import { supabase } from '../lib/supabase';
+
 export default function SignUp() {
     const [email, setEmail] = useState('');
     const [submitted, setSubmitted] = useState(false);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
+
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // Here you would typically send the email to your backend or API
-        console.log('Submitted email:', email);
-        setSubmitted(true);
+        setLoading(true);
+        setError(null);
+
+        try {
+            const { error } = await supabase
+                .from('early_access_signups')
+                .insert([{ email }]);
+
+            if (error) throw error;
+
+            console.log('Submitted email:', email);
+            setSubmitted(true);
+        } catch (err: any) {
+            console.error('Error submitting email:', err);
+            setError(err.message || 'An error occurred. Please try again.');
+        } finally {
+            setLoading(false);
+        }
     };
 
     const features = [
@@ -89,6 +109,12 @@ export default function SignUp() {
                                             Enter your email address to join our waiting list. We'll notify you as soon as we launch!
                                         </p>
 
+                                        {error && (
+                                            <div className="bg-red-500/20 text-white px-4 py-3 rounded-lg mb-6 text-sm backdrop-blur-sm border border-red-500/30">
+                                                {error}
+                                            </div>
+                                        )}
+
                                         <form onSubmit={handleSubmit} className="space-y-4">
                                             <div>
                                                 <label htmlFor="email" className="block text-sm font-medium text-blue-100 mb-1">
@@ -105,6 +131,7 @@ export default function SignUp() {
                                                         className="block w-full pl-10 pr-3 py-3 border-none rounded-xl bg-white/10 placeholder-blue-200 text-white focus:outline-none focus:ring-2 focus:ring-white/50 backdrop-blur-sm transition-all"
                                                         placeholder="you@example.com"
                                                         value={email}
+                                                        disabled={loading}
                                                         onChange={(e) => setEmail(e.target.value)}
                                                     />
                                                 </div>
@@ -112,11 +139,11 @@ export default function SignUp() {
 
                                             <Button
                                                 type="submit"
-                                                variant="secondary"
-                                                className="w-full justify-center"
-                                                icon={ArrowRight}
+                                                disabled={loading}
+                                                className="w-full justify-center disabled:opacity-70 disabled:cursor-not-allowed"
+                                                icon={loading ? undefined : ArrowRight}
                                             >
-                                                Sign Up Now
+                                                {loading ? 'Signing Up...' : 'Sign Up Now'}
                                             </Button>
 
                                             <p className="text-xs text-blue-200 text-center mt-4">
