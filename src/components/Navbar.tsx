@@ -27,10 +27,10 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center">
                     <Link to="/" className="flex items-center gap-3 group">
-                        <div className="bg-blue-600 rounded-xl p-1.5 shadow-lg shadow-blue-500/30 group-hover:scale-105 transition-transform duration-200">
+                        <div className="bg-gradient-to-r from-blue-600 to-teal-500 rounded-xl p-1.5 shadow-lg shadow-blue-500/30 group-hover:scale-105 transition-transform duration-200">
                             <Zap className="text-white w-6 h-6 fill-current" />
                         </div>
-                        <span className="text-2xl font-bold text-blue-600 tracking-tight group-hover:text-blue-700 transition-colors">
+                        <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent tracking-tight group-hover:opacity-80 transition-opacity">
                             Baraka Boost
                         </span>
                     </Link>

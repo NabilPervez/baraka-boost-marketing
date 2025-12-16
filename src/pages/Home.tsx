@@ -142,17 +142,17 @@ export default function Home() {
             </section>
 
             {/* Social Proof / Stats */}
-            <section className="py-20 bg-blue-900 text-white relative overflow-hidden">
+            <section className="py-20 bg-gradient-to-r from-blue-600 to-teal-500 text-white relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')] opacity-10"></div>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                         {[
                             { label: "Active Users", value: "100+" },
                             { label: "Habits Tracked", value: "1k+" },
                             { label: "Verses Journaled", value: "500+" }
                         ].map((stat, index) => (
                             <div key={index}>
-                                <div className="text-4xl font-bold mb-2 text-blue-400">{stat.value}</div>
+                                <div className="text-4xl font-bold mb-2 text-white">{stat.value}</div>
                                 <div className="text-blue-100">{stat.label}</div>
                             </div>
                         ))}
