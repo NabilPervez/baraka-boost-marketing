@@ -13,7 +13,7 @@ export default function Premium() {
     ];
 
     return (
-        <div className="bg-gradient-to-b from-emerald-50 to-white min-h-screen pt-12 pb-24">
+        <div className="bg-gradient-to-b from-blue-50 to-white min-h-screen pt-12 pb-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h1 className="text-4xl font-bold text-gray-900 mb-6">Upgrade to Baraka Boost Premium</h1>
@@ -56,9 +56,9 @@ export default function Premium() {
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.2 }}
-                        className="bg-emerald-900 text-white p-8 md:p-10 rounded-3xl shadow-2xl relative overflow-hidden"
+                        className="bg-blue-900 text-white p-8 md:p-10 rounded-3xl shadow-2xl relative overflow-hidden"
                     >
-                        <div className="absolute top-0 right-0 bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                        <div className="absolute top-0 right-0 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
                             MOST POPULAR
                         </div>
 
@@ -67,14 +67,14 @@ export default function Premium() {
                             <h3 className="text-2xl font-bold text-white">Premium</h3>
                         </div>
 
-                        <div className="text-5xl font-bold text-white mb-6">$4.99<span className="text-lg text-emerald-200 font-normal">/month</span></div>
-                        <p className="text-emerald-100 mb-8">Supercharge your productivity and spiritual growth.</p>
+                        <div className="text-5xl font-bold text-white mb-6">$4.99<span className="text-lg text-blue-200 font-normal">/month</span></div>
+                        <p className="text-blue-100 mb-8">Supercharge your productivity and spiritual growth.</p>
 
                         <ul className="space-y-4 mb-10">
                             {benefits.map((item, i) => (
-                                <li key={i} className="flex items-center text-emerald-50">
-                                    <div className="bg-emerald-800 rounded-full p-1 mr-3">
-                                        <Check className="w-3 h-3 text-emerald-300" />
+                                <li key={i} className="flex items-center text-blue-50">
+                                    <div className="bg-blue-800 rounded-full p-1 mr-3">
+                                        <Check className="w-3 h-3 text-blue-300" />
                                     </div>
                                     {item}
                                 </li>
@@ -84,13 +84,13 @@ export default function Premium() {
                         <Button
                             variant="primary"
                             size="lg"
-                            className="w-full bg-emerald-400 text-emerald-900 hover:bg-emerald-300 shadow-lg shadow-emerald-900/50"
+                            className="w-full bg-blue-400 text-blue-900 hover:bg-blue-300 shadow-lg shadow-blue-900/50"
                             icon={Star}
                         >
                             Subscribe Now
                         </Button>
 
-                        <p className="text-center text-emerald-400 text-sm mt-4">
+                        <p className="text-center text-blue-400 text-sm mt-4">
                             7-day free trial included. Cancel anytime.
                         </p>
                     </motion.div>
@@ -99,7 +99,7 @@ export default function Premium() {
                 {/* Comparison or FAQ could go here */}
                 <div className="mt-24 text-center">
                     <p className="text-gray-500">
-                        Need help choosing? <a href="mailto:support@barakaboost.com" className="text-emerald-600 font-medium underline">Contact our support team</a>
+                        Need help choosing? <a href="mailto:support@barakaboost.com" className="text-blue-600 font-medium underline">Contact our support team</a>
                     </p>
                 </div>
             </div>

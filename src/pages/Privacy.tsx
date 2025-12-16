@@ -4,7 +4,7 @@ export default function Privacy() {
         <div className="bg-white min-h-screen py-20">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h1 className="text-4xl font-bold text-gray-900 mb-8">Privacy Policy</h1>
-                <div className="prose prose-emerald max-w-none text-gray-600">
+                <div className="prose prose-blue max-w-none text-gray-600">
                     <p className="mb-4">Last upated: {new Date().toLocaleDateString()}</p>
                     <p className="mb-4">
                         At Baraka Boost, we take your privacy seriously. This Privacy Policy explains how we collect, use, and protect your personal information.

@@ -12,21 +12,21 @@ export default function Support() {
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
-                    <div className="p-8 rounded-2xl bg-emerald-50 border border-emerald-100 flex flex-col items-center">
-                        <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-6 text-emerald-600">
+                    <div className="p-8 rounded-2xl bg-blue-50 border border-blue-100 flex flex-col items-center">
+                        <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 text-blue-600">
                             <Mail size={32} />
                         </div>
                         <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
                         <p className="text-gray-600 mb-6">
                             Send us an email and we'll get back to you within 24 hours.
                         </p>
-                        <a href="mailto:support@barakaboost.com" className="text-emerald-600 font-semibold hover:underline">
+                        <a href="mailto:support@barakaboost.com" className="text-blue-600 font-semibold hover:underline">
                             support@barakaboost.com
                         </a>
                     </div>
 
-                    <div className="p-8 rounded-2xl bg-emerald-50 border border-emerald-100 flex flex-col items-center">
-                        <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-6 text-emerald-600">
+                    <div className="p-8 rounded-2xl bg-blue-50 border border-blue-100 flex flex-col items-center">
+                        <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 text-blue-600">
                             <MessageCircle size={32} />
                         </div>
                         <h3 className="text-xl font-bold text-gray-900 mb-2">Live Chat</h3>

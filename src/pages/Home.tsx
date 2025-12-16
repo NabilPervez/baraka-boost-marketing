@@ -40,13 +40,13 @@ export default function Home() {
                             transition={{ duration: 0.8 }}
                             className="lg:col-span-6 text-center lg:text-left mb-12 lg:mb-0"
                         >
-                            <div className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-100 text-emerald-800 font-medium text-sm mb-6">
-                                <Star className="w-4 h-4 mr-2 fill-emerald-600" />
+                            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-800 font-medium text-sm mb-6">
+                                <Star className="w-4 h-4 mr-2 fill-blue-600" />
                                 Islamic Atomic Habit Builder Gamified
                             </div>
                             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight leading-tight">
                                 Get Closer To Allah <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500">One Habit at a Time</span>
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500">One Habit at a Time</span>
                             </h1>
                             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                                 Empowering your spiritual journey through gamified habits, Quran journaling, and community connection. Build your Jannah, one good deed at a time.
@@ -97,7 +97,7 @@ export default function Home() {
                             transition={{ duration: 0.8, delay: 0.2 }}
                             className="lg:col-span-6 relative"
                         >
-                            <div className="absolute top-0 left-0 w-full h-full bg-emerald-200 rounded-full filter blur-3xl opacity-30"></div>
+                            <div className="absolute top-0 left-0 w-full h-full bg-blue-200 rounded-full filter blur-3xl opacity-30"></div>
                             <img
                                 src="/images/mosque_hero.jpg"
                                 alt="Islamic Mosque"
@@ -126,9 +126,9 @@ export default function Home() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                className="p-8 rounded-2xl bg-emerald-50 border border-emerald-100 hover:shadow-xl transition-shadow duration-300"
+                                className="p-8 rounded-2xl bg-blue-50 border border-blue-100 hover:shadow-xl transition-shadow duration-300"
                             >
-                                <div className="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-6 text-emerald-600">
+                                <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-blue-600">
                                     <feature.icon size={32} />
                                 </div>
                                 <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
@@ -142,7 +142,7 @@ export default function Home() {
             </section>
 
             {/* Social Proof / Stats */}
-            <section className="py-20 bg-emerald-900 text-white relative overflow-hidden">
+            <section className="py-20 bg-blue-900 text-white relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')] opacity-10"></div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -152,8 +152,8 @@ export default function Home() {
                             { label: "Verses Journaled", value: "500+" }
                         ].map((stat, index) => (
                             <div key={index}>
-                                <div className="text-4xl font-bold mb-2 text-emerald-400">{stat.value}</div>
-                                <div className="text-emerald-100">{stat.label}</div>
+                                <div className="text-4xl font-bold mb-2 text-blue-400">{stat.value}</div>
+                                <div className="text-blue-100">{stat.label}</div>
                             </div>
                         ))}
                     </div>
