@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { CheckCircle, Star, Book, Mic, GraduationCap, DollarSign, Activity, Heart, Brain, Zap, Layers, BarChart3 } from 'lucide-react';
+import { CheckCircle, Star, Book, Mic, GraduationCap, DollarSign, Activity, Heart, Brain, Zap, Layers, BarChart3, Flame, Trophy, TrendingUp } from 'lucide-react';
 import Button from '../components/Button';
 import { useCarousel } from '../hooks/useCarousel';
 
@@ -234,8 +234,70 @@ export default function Home() {
                 </div>
             </section>
 
+            {/* Gamification Section */}
+            <section className="py-20 bg-blue-50">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">See Yourself <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500 animate-gradient-x">Grow Every Day</span></h2>
+                        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                            Stay motivated with our gamified features designed to keep you consistent.
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-3 gap-8">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
+                            className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center"
+                        >
+                            <div className="w-16 h-16 mx-auto bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mb-6">
+                                <Flame size={32} />
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">Get on Fire with Streaks</h3>
+                            <p className="text-gray-600">
+                                Build momentum by keeping your daily streak alive. Consistency is key to spiritual growth.
+                            </p>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2 }}
+                            className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center"
+                        >
+                            <div className="w-16 h-16 mx-auto bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center mb-6">
+                                <Trophy size={32} />
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">Collect Achievements</h3>
+                            <p className="text-gray-600">
+                                Unlock badges and rewards as you hit milestones in your prayer, Quran, and learning journey.
+                            </p>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.3 }}
+                            className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center"
+                        >
+                            <div className="w-16 h-16 mx-auto bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mb-6">
+                                <TrendingUp size={32} />
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">Rank Up Your Profile</h3>
+                            <p className="text-gray-600">
+                                Level up individual traits and see your spiritual character evolve over time.
+                            </p>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
+
             {/* Social Proof / Stats */}
-            <section className="py-20 bg-gradient-to-r from-blue-600 to-teal-500 text-white relative overflow-hidden">
+            <section className="py-20 bg-gradient-to-r from-blue-600 via-teal-500 to-blue-600 animate-gradient-x text-white relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')] opacity-10"></div>
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
                     <h3 className="text-2xl md:text-3xl font-bold leading-relaxed italic">
