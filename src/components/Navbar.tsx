@@ -31,7 +31,7 @@ export default function Navbar() {
                         <div className="bg-gradient-to-r from-blue-600 to-teal-500 rounded-xl p-1.5 shadow-lg shadow-blue-500/30 group-hover:scale-105 transition-transform duration-200">
                             <Zap className="text-white w-6 h-6 fill-current" />
                         </div>
-                        <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent tracking-tight group-hover:opacity-80 transition-opacity">
+                        <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent tracking-tight group-hover:opacity-80 transition-opacity animate-gradient-x">
                             Baraka Boost
                         </span>
                     </Link>
