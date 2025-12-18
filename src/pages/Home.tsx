@@ -67,7 +67,7 @@ export default function Home() {
                             </div>
                             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight leading-tight">
                                 Get Closer To Allah <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500">One Habit at a Time</span>
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500 animate-gradient-x">One Habit at a Time</span>
                             </h1>
                             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                                 Empowering your spiritual journey through gamified habits, Quran repetition, and Islamic bullet journaling. Build a better you, one good deed at a time.
@@ -146,7 +146,7 @@ export default function Home() {
                             </p>
 
                             <p className="text-2xl font-bold text-gray-900">
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500">Baraka Boost</span> is designed to help you regain control, build consistency, and reconnect with your faith—one small step at a time.
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500 animate-gradient-x">Baraka Boost</span> is designed to help you regain control, build consistency, and reconnect with your faith—one small step at a time.
                             </p>
                         </div>
                     </div>
@@ -158,7 +158,7 @@ export default function Home() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
                         <div className="mb-12 lg:mb-0">
-                            <h2 className="text-3xl font-bold text-gray-900 mb-6">What Is <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500">Baraka Boost</span>?</h2>
+                            <h2 className="text-3xl font-bold text-gray-900 mb-6">What Is <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500 animate-gradient-x">Baraka Boost</span>?</h2>
                             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                                 Baraka Boost is your comprehensive digital companion for spiritual growth. We've combined the powerful principles of "Atomic Habits" with Islamic teachings to create a system that works for the modern Muslim.
                             </p>
@@ -182,7 +182,7 @@ export default function Home() {
             <section className="py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">How to Use <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500">Baraka Boost</span></h2>
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">How to Use <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500 animate-gradient-x">Baraka Boost</span></h2>
                         <p className="text-xl text-gray-600">Start your journey in three simple steps</p>
                     </div>
 
@@ -248,7 +248,7 @@ export default function Home() {
             <section id="features" className="py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500">Baraka Boost</span>?</h2>
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500 animate-gradient-x">Baraka Boost</span>?</h2>
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                             We combine modern psychology with timeless Islamic wisdom to help you become the best version of yourself.
                         </p>
@@ -285,7 +285,7 @@ export default function Home() {
             <section className="py-20 bg-gray-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Improve 1% <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500">Everyday</span></h2>
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Improve 1% <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500 animate-gradient-x">Everyday</span></h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                             Track your consistency and watch your improved spirituality with broken-down analytics. We help you measure your progress so you can see your growth across:
                         </p>

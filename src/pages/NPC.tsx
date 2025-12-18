@@ -14,7 +14,8 @@ export default function NPC() {
         { name: "Paramount Pictures", domain: "paramount.com" },
         { name: "Kraft Group", domain: "thekraftgroup.com" },
         { name: "Activision Blizzard", domain: "activisionblizzard.com" },
-        { name: "Riot Games", domain: "riotgames.com" }
+        { name: "Riot Games", domain: "riotgames.com" },
+        { name: "Funny Or Die", domain: "funnyordie.com" }
     ];
 
     return (
@@ -31,7 +32,7 @@ export default function NPC() {
                         >
                             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                                 Assalamu Alaikum, <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500">
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500 animate-gradient-x">
                                     I'm Nabil Pervez
                                 </span>
                             </h1>
