@@ -20,6 +20,7 @@ export default function Navbar() {
         { name: 'Home', path: '/' },
         { name: 'Premium', path: '/premium', icon: Zap },
         { name: 'Donate', path: '/donation', icon: Heart },
+        { name: 'Created By', path: '/npc', icon: Zap },
     ];
 
     return (

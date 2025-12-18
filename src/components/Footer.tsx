@@ -24,6 +24,21 @@ export default function Footer() {
                         </div>
                     </div>
 
+                    <div className="col-span-1 md:col-span-4 lg:col-span-2 pt-8 mt-8 border-t border-blue-800 lg:border-0 lg:mt-0 lg:pt-0">
+                        <h3 className="text-xl font-bold text-white mb-4">Nabil Pervez Consulting</h3>
+                        <p className="text-blue-200/80 mb-4 max-w-sm text-sm">
+                            Helping individuals, businesses, and corporations scale through strategic brand marketing, IT operations, and business strategy.
+                        </p>
+                        <a
+                            href="https://nabilpervezconsulting.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-400 hover:text-white transition-colors text-sm font-medium flex items-center space-x-1"
+                        >
+                            <span>Visit nabilpervezconsulting.com</span>
+                        </a>
+                    </div>
+
                     <div>
                         <h4 className="text-white font-semibold mb-4">Quick Links</h4>
                         <ul className="space-y-3">

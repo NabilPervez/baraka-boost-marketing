@@ -8,6 +8,7 @@ import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import Support from './pages/Support';
 import SignUp from './pages/SignUp';
+import NPC from './pages/NPC';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/terms" element={<Terms />} />
           <Route path="/support" element={<Support />} />
           <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/npc" element={<NPC />} />
         </Routes>
       </Layout>
     </Router>

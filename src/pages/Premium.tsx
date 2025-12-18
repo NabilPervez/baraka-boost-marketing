@@ -80,13 +80,13 @@ export default function Premium() {
                         </ul>
 
                         <Button
-                            href="https://buy.stripe.com/fZubJ2gm5cfm1o2dkC6EU00"
+                            // href="https://buy.stripe.com/fZubJ2gm5cfm1o2dkC6EU00"
                             variant="primary"
                             size="lg"
-                            className="w-full bg-white text-blue-600 hover:bg-blue-50 shadow-lg shadow-blue-900/20"
+                            className="w-full bg-gray-300 text-gray-500 cursor-not-allowed shadow-none"
                             icon={Star}
                         >
-                            Subscribe Now
+                            Subscribe Now (Coming Soon)
                         </Button>
 
                         <p className="text-center text-blue-400 text-sm mt-4">
