@@ -15,6 +15,7 @@ export default {
                 'float': 'float 9s ease-in-out infinite',
                 'bounce': 'bounce 1s infinite',
                 'gradient-x': 'gradient-x 3s ease infinite',
+                'gradient-x-slow': 'gradient-x 15s ease infinite',
             },
             keyframes: {
                 fadeIn: {

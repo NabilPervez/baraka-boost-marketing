@@ -297,7 +297,7 @@ export default function Home() {
             </section>
 
             {/* Social Proof / Stats */}
-            <section className="py-20 bg-gradient-to-r from-blue-600 via-teal-500 to-blue-600 animate-gradient-x text-white relative overflow-hidden">
+            <section className="py-20 bg-gradient-to-r from-blue-600 via-teal-500 to-blue-600 animate-gradient-x-slow text-white relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')] opacity-10"></div>
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
                     <h3 className="text-2xl md:text-3xl font-bold leading-relaxed italic">
