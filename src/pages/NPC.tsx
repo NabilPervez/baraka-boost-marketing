@@ -5,6 +5,17 @@ import { useCarousel } from '../hooks/useCarousel';
 
 export default function NPC() {
     const { containerRef, handleTap } = useCarousel(3000);
+    const { containerRef: companiesRef, handleTap: companiesTap } = useCarousel(2500);
+
+    const companies = [
+        { name: "Red Bull", domain: "redbull.com" },
+        { name: "LEGO", domain: "lego.com" },
+        { name: "Coca-Cola", domain: "coca-cola.com.sg" }, // Singapore domain often better for logos or just coca-cola.com
+        { name: "Paramount Pictures", domain: "paramount.com" },
+        { name: "Kraft Group", domain: "thekraftgroup.com" },
+        { name: "Activision Blizzard", domain: "activisionblizzard.com" },
+        { name: "Riot Games", domain: "riotgames.com" }
+    ];
 
     return (
         <div className="bg-white min-h-screen">
@@ -25,6 +36,16 @@ export default function NPC() {
                                 </span>
                             </h1>
 
+                            {/* Mobile Headshot */}
+                            <div className="lg:hidden mb-8 relative inline-block w-full max-w-sm mx-auto">
+                                <div className="absolute inset-0 bg-blue-100 rounded-2xl transform rotate-2"></div>
+                                <img
+                                    src="https://nabilpervezconsulting.com/assets/nabil-headshot-Curnkhgz.jpg"
+                                    alt="Nabil Pervez"
+                                    className="relative z-10 rounded-2xl shadow-xl w-full object-cover"
+                                />
+                            </div>
+
                             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                                 <p>
                                     I am the former CTO and Co-Founder of AOE Creative, an award-winning, multi-million dollar agency.
@@ -32,14 +53,38 @@ export default function NPC() {
                                 <p>
                                     I spent years building brand identities and strategies for some of the world's most powerful companies.
                                 </p>
+
+                                {/* Company Showcase */}
+                                <div className="py-4 -mx-4 px-4 md:mx-0 md:px-0">
+                                    <div
+                                        ref={companiesRef}
+                                        onClick={companiesTap}
+                                        className="flex overflow-x-auto gap-4 snap-x snap-mandatory md:grid md:grid-cols-4 md:gap-4 no-scrollbar cursor-pointer md:cursor-default"
+                                    >
+                                        {companies.map((company, i) => (
+                                            <div
+                                                key={i}
+                                                className="bg-white border border-gray-100 rounded-lg p-4 shadow-sm min-w-[140px] snap-center flex flex-col items-center justify-center text-center h-32 select-none hover:shadow-md transition-shadow"
+                                            >
+                                                <img
+                                                    src={`https://logo.clearbit.com/${company.domain}`}
+                                                    alt={`${company.name} Logo`}
+                                                    className="w-12 h-12 object-contain mb-3 opacity-80"
+                                                    onError={(e) => {
+                                                        (e.target as HTMLImageElement).style.display = 'none';
+                                                    }}
+                                                />
+                                                <span className="text-xs font-bold text-gray-700 leading-tight">{company.name}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+
                                 <p>
-                                    I built Baraka Boost to help Muslims of varying levels of iman to help refine their lives and connect with the ummah.
+                                    I built Baraka Boost to help Muslims of varying levels of iman to improve by combining my love of Islam and gaming. I really wanted connect with the ummah and use the unique skillset Allah gave me to help.
                                 </p>
                                 <p>
                                     Now, I am available to apply my executive expertise to the most important projects of all: <span className="font-semibold text-gray-900">your career, your business, and your deen.</span>
-                                </p>
-                                <p>
-                                    The services I offer are shown below:
                                 </p>
                             </div>
 
@@ -66,7 +111,7 @@ export default function NPC() {
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="lg:col-span-5 text-center"
+                            className="hidden lg:block lg:col-span-5 text-center"
                         >
                             <div className="relative inline-block">
                                 <div className="absolute inset-0 bg-blue-100 rounded-2xl transform rotate-3"></div>
