@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion';
 import { Calendar, Globe, Briefcase } from 'lucide-react';
 import Button from '../components/Button';
+import { useCarousel } from '../hooks/useCarousel';
 
 export default function NPC() {
+    const { containerRef, handleTap } = useCarousel(3000);
+
     return (
         <div className="bg-white min-h-screen">
             {/* Hero Section */}
@@ -24,13 +27,19 @@ export default function NPC() {
 
                             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                                 <p>
-                                    I'm a former executive, CTO, Lead Product and Project Manager, and co-founder of the award winning, multi-million dollar agency - <strong>AOE Creative</strong>.
+                                    I am the former CTO and Co-Founder of AOE Creative, an award-winning, multi-million dollar agency.
                                 </p>
                                 <p>
-                                    I spent years working with the world's most powerful companies to build brand identities for their projects.
+                                    I spent years building brand identities and strategies for some of the world's most powerful companies.
                                 </p>
                                 <p>
-                                    Now I'm taking my expertise and applying them to the most important project of all: <span className="font-semibold text-gray-900">your careers and businesses.</span>
+                                    I built Baraka Boost to help Muslims of varying levels of iman to help refine their lives and connect with the ummah.
+                                </p>
+                                <p>
+                                    Now, I am available to apply my executive expertise to the most important projects of all: <span className="font-semibold text-gray-900">your career, your business, and your deen.</span>
+                                </p>
+                                <p>
+                                    The services I offer are shown below:
                                 </p>
                             </div>
 
@@ -77,7 +86,11 @@ export default function NPC() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-3xl font-bold text-gray-900 mb-12">How I Can Help You</h2>
 
-                    <div className="grid md:grid-cols-3 gap-8">
+                    <div
+                        ref={containerRef}
+                        onClick={handleTap}
+                        className="flex overflow-x-auto pb-8 gap-4 snap-x snap-mandatory md:grid md:grid-cols-3 md:gap-8 md:overflow-visible no-scrollbar px-4 md:px-0 -mx-4 md:mx-0 cursor-pointer md:cursor-default"
+                    >
                         {[
                             {
                                 title: "Brand Marketing",
@@ -101,7 +114,7 @@ export default function NPC() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.2 }}
-                                className="bg-white p-8 rounded-xl shadow-sm border border-blue-100"
+                                className="bg-white p-8 rounded-xl shadow-sm border border-blue-100 min-w-[85vw] md:min-w-0 snap-center select-none"
                             >
                                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-6 text-blue-600">
                                     <service.icon size={24} />

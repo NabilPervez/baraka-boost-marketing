@@ -2,9 +2,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { CheckCircle, Star, Book, Mic, GraduationCap, DollarSign, Activity, Heart, Brain, Zap, Layers, BarChart3 } from 'lucide-react';
 import Button from '../components/Button';
+import { useCarousel } from '../hooks/useCarousel';
 
 export default function Home() {
     const [index, setIndex] = useState(0);
+    const { containerRef: howToRef, handleTap: handleHowToTap } = useCarousel(3000);
+    const { containerRef: featuresRef, handleTap: handleFeaturesTap } = useCarousel(3500);
+    const { containerRef: improveRef, handleTap: handleImproveTap } = useCarousel(4000);
 
     const phrases = [
         "Improve?",
@@ -95,7 +99,7 @@ export default function Home() {
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="lg:col-span-6 relative"
+                            className="lg:col-span-6 relative hidden md:block"
                         >
                             <div className="absolute top-0 left-0 w-full h-full bg-blue-200 rounded-full filter blur-3xl opacity-30"></div>
                             <img
@@ -162,7 +166,7 @@ export default function Home() {
                                 Whether you want to establish your 5 daily prayers, memorize more Quran, or simply learn the basics of your deen, Baraka Boost provides the structure, motivation, and tools you need to succeed.
                             </p>
                         </div>
-                        <div className="relative">
+                        <div className="relative hidden md:block">
                             <div className="absolute inset-0 bg-blue-100 rounded-2xl transform rotate-3"></div>
                             <img
                                 src="/images/mosque_hero.jpg"
@@ -182,7 +186,11 @@ export default function Home() {
                         <p className="text-xl text-gray-600">Start your journey in three simple steps</p>
                     </div>
 
-                    <div className="relative flex overflow-x-auto pb-8 gap-4 snap-x snap-mandatory md:grid md:grid-cols-3 md:gap-8 md:overflow-visible no-scrollbar">
+                    <div
+                        ref={howToRef}
+                        onClick={handleHowToTap}
+                        className="relative flex overflow-x-auto pb-8 gap-4 snap-x snap-mandatory md:grid md:grid-cols-3 md:gap-8 md:overflow-visible no-scrollbar cursor-pointer md:cursor-default"
+                    >
                         {/* Connecting Line (Desktop) */}
                         <div className="hidden md:block absolute top-12 left-1/6 right-1/6 h-0.5 bg-gray-200 -z-10"></div>
 
@@ -212,7 +220,7 @@ export default function Home() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.2 }}
-                                className="relative bg-white pt-8 px-6 pb-6 text-center min-w-[85vw] md:min-w-0 snap-center rounded-2xl border md:border-none border-gray-100 shadow-sm md:shadow-none mx-2 md:mx-0"
+                                className="relative bg-white pt-8 px-6 pb-6 text-center min-w-[85vw] md:min-w-0 snap-center rounded-2xl border md:border-none border-gray-100 shadow-sm md:shadow-none mx-2 md:mx-0 select-none"
                             >
                                 <div className="w-24 h-24 mx-auto bg-blue-600 rounded-full flex items-center justify-center text-white shadow-lg mb-6 border-4 border-white">
                                     <item.icon size={40} />
@@ -246,7 +254,11 @@ export default function Home() {
                         </p>
                     </div>
 
-                    <div className="flex overflow-x-auto pb-8 gap-4 snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-8 md:overflow-visible no-scrollbar px-4 md:px-0 -mx-4 md:mx-0">
+                    <div
+                        ref={featuresRef}
+                        onClick={handleFeaturesTap}
+                        className="flex overflow-x-auto pb-8 gap-4 snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-8 md:overflow-visible no-scrollbar px-4 md:px-0 -mx-4 md:mx-0 cursor-pointer md:cursor-default"
+                    >
                         {features.map((feature, index) => (
                             <motion.div
                                 key={index}
@@ -254,7 +266,7 @@ export default function Home() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                className="p-8 rounded-2xl bg-blue-50 border border-blue-100 min-w-[85vw] md:min-w-0 snap-center"
+                                className="p-8 rounded-2xl bg-blue-50 border border-blue-100 min-w-[85vw] md:min-w-0 snap-center select-none"
                             >
                                 <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-blue-600 mx-auto">
                                     <feature.icon size={32} />
@@ -279,7 +291,11 @@ export default function Home() {
                         </p>
                     </div>
 
-                    <div className="flex overflow-x-auto pb-8 gap-4 snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-8 md:overflow-visible no-scrollbar px-4 md:px-0 -mx-4 md:mx-0">
+                    <div
+                        ref={improveRef}
+                        onClick={handleImproveTap}
+                        className="flex overflow-x-auto pb-8 gap-4 snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-8 md:overflow-visible no-scrollbar px-4 md:px-0 -mx-4 md:mx-0 cursor-pointer md:cursor-default"
+                    >
                         {[
                             { icon: Activity, title: "Physically", color: "text-red-500", bg: "bg-red-50" },
                             { icon: Zap, title: "Spiritually", color: "text-amber-500", bg: "bg-amber-50" },
@@ -292,7 +308,7 @@ export default function Home() {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                className={`p-6 rounded-2xl ${item.bg} text-center min-w-[70vw] md:min-w-0 snap-center`}
+                                className={`p-6 rounded-2xl ${item.bg} text-center min-w-[70vw] md:min-w-0 snap-center select-none`}
                             >
                                 <div className={`w-16 h-16 mx-auto rounded-full bg-white shadow-sm flex items-center justify-center mb-4 ${item.color}`}>
                                     <item.icon size={32} />
