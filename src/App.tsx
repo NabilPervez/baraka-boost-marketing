@@ -9,6 +9,7 @@ import Terms from './pages/Terms';
 import Support from './pages/Support';
 import SignUp from './pages/SignUp';
 import NPC from './pages/NPC';
+import RemoveMyData from './pages/RemoveMyData';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/support" element={<Support />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/npc" element={<NPC />} />
+          <Route path="/remove-my-data" element={<RemoveMyData />} />
         </Routes>
       </Layout>
     </Router>
