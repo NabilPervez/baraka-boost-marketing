@@ -21,7 +21,12 @@ export default function Feedback() {
         try {
             const { error } = await supabase
                 .from('feedback')
-                .insert([{ name, email, message, type, source: 'sales-site' }]);
+                .insert([{
+                    email,
+                    message: name ? `Name: ${name}\n\n${message}` : message,
+                    type,
+                    source: 'sales-site'
+                }]);
 
             if (error) throw error;
 
@@ -121,8 +126,8 @@ export default function Feedback() {
                                                 type="button"
                                                 onClick={() => setType(t.id)}
                                                 className={`flex flex-col items-center justify-center p-3 rounded-xl border transition-all ${type === t.id
-                                                        ? 'border-blue-500 bg-blue-50 text-blue-700'
-                                                        : 'border-gray-200 hover:border-blue-300 hover:bg-gray-50 text-gray-600'
+                                                    ? 'border-blue-500 bg-blue-50 text-blue-700'
+                                                    : 'border-gray-200 hover:border-blue-300 hover:bg-gray-50 text-gray-600'
                                                     }`}
                                             >
                                                 <t.icon className={`w-6 h-6 mb-2 ${type === t.id ? 'text-blue-600' : 'text-gray-400'}`} />
