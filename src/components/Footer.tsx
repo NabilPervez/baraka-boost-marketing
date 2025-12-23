@@ -55,6 +55,7 @@ export default function Footer() {
                             <li><Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>
                             <li><Link to="/support" className="hover:text-white transition-colors">Contact Support</Link></li>
                             <li><Link to="/remove-my-data" className="hover:text-white transition-colors">Remove My Data</Link></li>
+                            <li><Link to="/feedback" className="hover:text-white transition-colors">Feedback</Link></li>
                         </ul>
                     </div>
                 </div>
