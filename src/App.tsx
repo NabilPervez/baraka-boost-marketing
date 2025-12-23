@@ -10,6 +10,7 @@ import Support from './pages/Support';
 import SignUp from './pages/SignUp';
 import NPC from './pages/NPC';
 import RemoveMyData from './pages/RemoveMyData';
+import Feedback from './pages/Feedback';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/npc" element={<NPC />} />
           <Route path="/remove-my-data" element={<RemoveMyData />} />
+          <Route path="/feedback" element={<Feedback />} />
         </Routes>
       </Layout>
     </Router>
