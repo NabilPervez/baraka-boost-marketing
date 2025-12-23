@@ -23,9 +23,8 @@ export default function Feedback() {
                 .from('feedback')
                 .insert([{
                     email,
-                    message: name ? `Name: ${name}\n\n${message}` : message,
-                    type,
-                    source: 'sales-site'
+                    message: `Source: Sales Site\n${name ? `Name: ${name}\n` : ''}\n${message}`,
+                    type
                 }]);
 
             if (error) throw error;
