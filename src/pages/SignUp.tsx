@@ -71,7 +71,7 @@ export default function SignUp() {
                         </div>
 
                         {/* Form Side */}
-                        <div className="bg-gradient-to-br from-blue-600 to-teal-500 p-8 md:p-12 text-white flex flex-col justify-center relative overflow-hidden">
+                        <div className="bg-gradient-to-br from-blue-600 to-teal-500 p-6 md:p-8 text-white flex flex-col justify-center relative overflow-hidden">
                             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')] opacity-10"></div>
 
                             <div className="relative z-10">

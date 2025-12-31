@@ -400,8 +400,10 @@ export default function Home() {
                     </div>
 
                     <div className="mt-12">
-                        <p className="text-gray-500 mb-4 font-medium">Alternatively, join our newsletter for updates</p>
-                        <NewsletterEmbed />
+                        <p className="text-gray-500 mb-2 font-medium">Alternatively, join our newsletter for updates</p>
+                        <div className="max-w-md mx-auto">
+                            <NewsletterEmbed />
+                        </div>
                     </div>
                 </div>
             </section>
