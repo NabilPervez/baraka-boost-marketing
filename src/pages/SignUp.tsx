@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { CheckCircle, Book, Mic, Star } from 'lucide-react';
+import { CheckCircle, Book, Mic, Star, Flame, Trophy } from 'lucide-react';
 import SignUpCard from '../components/SignUpCard';
 
 export default function SignUp() {
@@ -40,15 +40,39 @@ export default function SignUp() {
                             It works because it respects your psychology. By using gamification—streaks, levels, and badging—we turn spiritual discipline into a rewarding, engaging experience rather than a chore.
                         </p>
                     </motion.div>
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        className="bg-blue-100 rounded-2xl p-8 aspect-video flex items-center justify-center"
-                    >
-                        {/* Placeholder for an illustrative image */}
-                        <div className="text-blue-500 font-bold text-xl opacity-50">[App Interface Preview]</div>
-                    </motion.div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
+                            className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center"
+                        >
+                            <div className="w-14 h-14 mx-auto bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mb-4">
+                                <Flame size={28} />
+                            </div>
+                            <h3 className="text-lg font-bold text-gray-900 mb-2">Streaks</h3>
+                            <p className="text-sm text-gray-600">
+                                Build momentum by keeping your daily streak alive.
+                            </p>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2 }}
+                            className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center"
+                        >
+                            <div className="w-14 h-14 mx-auto bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center mb-4">
+                                <Trophy size={28} />
+                            </div>
+                            <h3 className="text-lg font-bold text-gray-900 mb-2">Rewards</h3>
+                            <p className="text-sm text-gray-600">
+                                Unlock badges as you hit key spiritual milestones.
+                            </p>
+                        </motion.div>
+                    </div>
                 </section>
 
                 {/* How does it work? (Steps) */}
