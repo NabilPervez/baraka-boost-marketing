@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { CheckCircle, Book, Mic, Star } from 'lucide-react';
-import NewsletterEmbed from '../components/NewsletterEmbed';
 import SignUpCard from '../components/SignUpCard';
 
 export default function SignUp() {
