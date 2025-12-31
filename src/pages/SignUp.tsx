@@ -1,38 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle, Book, Mic, Star, ArrowRight, Mail } from 'lucide-react';
-import Button from '../components/Button';
+import { CheckCircle, Book, Mic, Star } from 'lucide-react';
 
-import { supabase } from '../lib/supabase';
+import NewsletterEmbed from '../components/NewsletterEmbed';
 
 export default function SignUp() {
-    const [email, setEmail] = useState('');
-    const [submitted, setSubmitted] = useState(false);
-
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState<string | null>(null);
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        setLoading(true);
-        setError(null);
-
-        try {
-            const { error } = await supabase
-                .from('early_access_signups')
-                .insert([{ email }]);
-
-            if (error) throw error;
-
-            console.log('Submitted email:', email);
-            setSubmitted(true);
-        } catch (err: any) {
-            console.error('Error submitting email:', err);
-            setError(err.message || 'An error occurred. Please try again.');
-        } finally {
-            setLoading(false);
-        }
-    };
+    // State and handlers removed as we are using Beehiiv embed
 
     const features = [
         {
@@ -102,77 +75,11 @@ export default function SignUp() {
                             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')] opacity-10"></div>
 
                             <div className="relative z-10">
-                                {!submitted ? (
-                                    <>
-                                        <h2 className="text-2xl font-bold mb-4">Get Early Access</h2>
-                                        <p className="text-blue-100 mb-8">
-                                            Enter your email address to join our waiting list. We'll notify you as soon as we launch!
-                                        </p>
-
-                                        {error && (
-                                            <div className="bg-red-500/20 text-white px-4 py-3 rounded-lg mb-6 text-sm backdrop-blur-sm border border-red-500/30">
-                                                {error}
-                                            </div>
-                                        )}
-
-                                        <form onSubmit={handleSubmit} className="space-y-4">
-                                            <div>
-                                                <label htmlFor="email" className="block text-sm font-medium text-blue-100 mb-1">
-                                                    Email Address
-                                                </label>
-                                                <div className="relative">
-                                                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                                        <Mail className="h-5 w-5 text-blue-300" />
-                                                    </div>
-                                                    <input
-                                                        type="email"
-                                                        id="email"
-                                                        required
-                                                        className="block w-full pl-10 pr-3 py-3 border-none rounded-xl bg-white/10 placeholder-blue-200 text-white focus:outline-none focus:ring-2 focus:ring-white/50 backdrop-blur-sm transition-all"
-                                                        placeholder="you@example.com"
-                                                        value={email}
-                                                        disabled={loading}
-                                                        onChange={(e) => setEmail(e.target.value)}
-                                                    />
-                                                </div>
-                                            </div>
-
-                                            <Button
-                                                type="submit"
-                                                disabled={loading}
-                                                className="w-full justify-center disabled:opacity-70 disabled:cursor-not-allowed"
-                                                icon={loading ? undefined : ArrowRight}
-                                            >
-                                                {loading ? 'Signing Up...' : 'Sign Up Now'}
-                                            </Button>
-
-                                            <p className="text-xs text-blue-200 text-center mt-4">
-                                                We respect your privacy. No spam, ever.
-                                            </p>
-                                        </form>
-                                    </>
-                                ) : (
-                                    <motion.div
-                                        initial={{ opacity: 0, scale: 0.9 }}
-                                        animate={{ opacity: 1, scale: 1 }}
-                                        className="text-center"
-                                    >
-                                        <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
-                                            <CheckCircle className="w-8 h-8 text-white" />
-                                        </div>
-                                        <h2 className="text-2xl font-bold mb-2">You're on the list!</h2>
-                                        <p className="text-blue-100 mb-8">
-                                            JazakAllah Khair! We've received your details and will be in touch soon.
-                                        </p>
-                                        <Button
-                                            href="/"
-                                            variant="secondary"
-                                            className="w-full justify-center"
-                                        >
-                                            Back to Home
-                                        </Button>
-                                    </motion.div>
-                                )}
+                                <h2 className="text-2xl font-bold mb-4">Get Early Access</h2>
+                                <p className="text-blue-100 mb-8">
+                                    Subscribe to our newsletter to get exclusive updates and early access!
+                                </p>
+                                <NewsletterEmbed />
                             </div>
                         </div>
                     </div>

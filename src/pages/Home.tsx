@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { CheckCircle, Star, Book, Mic, GraduationCap, DollarSign, Activity, Heart, Brain, Zap, Layers, BarChart3, Flame, Trophy, TrendingUp } from 'lucide-react';
 import Button from '../components/Button';
 import { useCarousel } from '../hooks/useCarousel';
+import NewsletterEmbed from '../components/NewsletterEmbed';
 
 export default function Home() {
     const [index, setIndex] = useState(0);
@@ -396,9 +397,11 @@ export default function Home() {
                         <Button size="lg" variant="outline" href="/donation" icon={DollarSign}>
                             Donate Now
                         </Button>
-                        <Button size="lg" variant="secondary" href="/premium" icon={Star}>
-                            Get Premium Features
-                        </Button>
+                    </div>
+
+                    <div className="mt-12">
+                        <p className="text-gray-500 mb-4 font-medium">Alternatively, join our newsletter for updates</p>
+                        <NewsletterEmbed />
                     </div>
                 </div>
             </section>
