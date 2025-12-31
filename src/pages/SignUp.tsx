@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { CheckCircle, Book, Mic, Star, Flame, Trophy } from 'lucide-react';
+import { CheckCircle, Book, Mic, Star, Flame, Trophy, TrendingUp } from 'lucide-react';
 import SignUpCard from '../components/SignUpCard';
 
 export default function SignUp() {
@@ -40,37 +40,59 @@ export default function SignUp() {
                             It works because it respects your psychology. By using gamification—streaks, levels, and badging—we turn spiritual discipline into a rewarding, engaging experience rather than a chore.
                         </p>
                     </motion.div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div className="flex flex-col gap-4">
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, x: 20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.1 }}
-                            className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center"
+                            className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-left flex items-start gap-4"
                         >
-                            <div className="w-14 h-14 mx-auto bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mb-4">
-                                <Flame size={28} />
+                            <div className="flex-shrink-0 w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center">
+                                <Flame size={24} />
                             </div>
-                            <h3 className="text-lg font-bold text-gray-900 mb-2">Streaks</h3>
-                            <p className="text-sm text-gray-600">
-                                Build momentum by keeping your daily streak alive.
-                            </p>
+                            <div>
+                                <h3 className="text-lg font-bold text-gray-900 mb-1">Get on Fire with Streaks</h3>
+                                <p className="text-sm text-gray-600 leading-relaxed">
+                                    Build momentum by keeping your daily streak alive. Consistency is key to spiritual growth.
+                                </p>
+                            </div>
                         </motion.div>
 
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, x: 20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.2 }}
-                            className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center"
+                            className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-left flex items-start gap-4"
                         >
-                            <div className="w-14 h-14 mx-auto bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center mb-4">
-                                <Trophy size={28} />
+                            <div className="flex-shrink-0 w-12 h-12 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center">
+                                <Trophy size={24} />
                             </div>
-                            <h3 className="text-lg font-bold text-gray-900 mb-2">Rewards</h3>
-                            <p className="text-sm text-gray-600">
-                                Unlock badges as you hit key spiritual milestones.
-                            </p>
+                            <div>
+                                <h3 className="text-lg font-bold text-gray-900 mb-1">Collect Achievements</h3>
+                                <p className="text-sm text-gray-600 leading-relaxed">
+                                    Unlock badges and rewards as you hit milestones in your prayer, Quran, and learning journey.
+                                </p>
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, x: 20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.3 }}
+                            className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-left flex items-start gap-4"
+                        >
+                            <div className="flex-shrink-0 w-12 h-12 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center">
+                                <TrendingUp size={24} />
+                            </div>
+                            <div>
+                                <h3 className="text-lg font-bold text-gray-900 mb-1">Rank Up Your Profile</h3>
+                                <p className="text-sm text-gray-600 leading-relaxed">
+                                    Level up individual traits and see your spiritual character evolve over time.
+                                </p>
+                            </div>
                         </motion.div>
                     </div>
                 </section>
