@@ -1,89 +1,113 @@
-
 import { motion } from 'framer-motion';
 import { CheckCircle, Book, Mic, Star } from 'lucide-react';
-
 import NewsletterEmbed from '../components/NewsletterEmbed';
+import SignUpCard from '../components/SignUpCard';
 
 export default function SignUp() {
-    // State and handlers removed as we are using Beehiiv embed
-
-    const features = [
-        {
-            icon: CheckCircle,
-            title: "Rebuild Your Habits",
-            description: " gamified system to help you build and maintain consistent Islamic habits."
-        },
-        {
-            icon: Book,
-            title: "Digital Islamic Bullet Journal",
-            description: "A beautiful space to reflect on verses and connect deeper with Islam."
-        },
-        {
-            icon: Mic,
-            title: "Ayah Echo",
-            description: "Memorize Quran faster with our specialized audio tools."
-        }
-    ];
-
     return (
         <div className="min-h-screen bg-gray-50 pt-20 pb-12 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-6xl mx-auto">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    className="bg-white rounded-3xl shadow-2xl overflow-hidden"
-                >
-                    <div className="grid md:grid-cols-2">
-                        {/* Content Side */}
-                        <div className="p-8 md:p-12 relative overflow-hidden">
-                            <div className="absolute top-0 right-0 -mt-20 -mr-20 w-64 h-64 bg-blue-100 rounded-full blur-3xl opacity-50"></div>
+            <div className="max-w-6xl mx-auto space-y-24">
 
-                            <div className="relative z-10">
-                                <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-semibold mb-6">
-                                    <Star className="w-3 h-3 mr-1 fill-blue-600" />
-                                    Early Access
-                                </div>
+                {/* Hero Card */}
+                <SignUpCard />
 
-                                <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                                    Join Baraka Boost
-                                </h1>
-                                <p className="text-gray-600 mb-8 leading-relaxed">
-                                    Be the first to experience the future of Islamic productivity. Sign up now to get exclusive updates and early access to our revolutionary app.
-                                </p>
+                {/* What is the problem being solved? */}
+                <section className="text-center max-w-4xl mx-auto">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                    >
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">The Modern Struggle</h2>
+                        <p className="text-xl text-gray-600 leading-relaxed">
+                            We live in an age of constant distraction. Between social media, work, and endless notifications, it’s harder than ever to find focus—especially when it comes to our deen. We want to be consistent, but life gets in the way.
+                        </p>
+                    </motion.div>
+                </section>
 
-                                <div className="space-y-6 mb-8">
-                                    {features.map((feature, index) => (
-                                        <div key={index} className="flex items-start">
-                                            <div className="flex-shrink-0">
-                                                <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-blue-50 text-blue-600">
-                                                    <feature.icon size={18} />
-                                                </div>
-                                            </div>
-                                            <div className="ml-4">
-                                                <h3 className="text-sm font-semibold text-gray-900">{feature.title}</h3>
-                                                <p className="text-xs text-gray-500">{feature.description}</p>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
+                {/* What is Baraka Boost? & Why does it work? */}
+                <section className="grid md:grid-cols-2 gap-12 items-center">
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                    >
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">What is Baraka Boost?</h2>
+                        <p className="text-lg text-gray-600 mb-8">
+                            Baraka Boost is your comprehensive digital companion for spiritual growth. It's the first app designed to merge high-performance productivity tools with timeless Islamic practices.
+                        </p>
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Does It Work?</h2>
+                        <p className="text-lg text-gray-600">
+                            It works because it respects your psychology. By using gamification—streaks, levels, and badging—we turn spiritual discipline into a rewarding, engaging experience rather than a chore.
+                        </p>
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        className="bg-blue-100 rounded-2xl p-8 aspect-video flex items-center justify-center"
+                    >
+                        {/* Placeholder for an illustrative image */}
+                        <div className="text-blue-500 font-bold text-xl opacity-50">[App Interface Preview]</div>
+                    </motion.div>
+                </section>
 
-                        {/* Form Side */}
-                        <div className="bg-gradient-to-br from-blue-600 to-teal-500 p-6 md:p-8 text-white flex flex-col justify-center relative overflow-hidden">
-                            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')] opacity-10"></div>
-
-                            <div className="relative z-10">
-                                <h2 className="text-2xl font-bold mb-4">Get Early Access</h2>
-                                <p className="text-blue-100 mb-8">
-                                    Subscribe to our newsletter to get exclusive updates and early access!
-                                </p>
-                                <NewsletterEmbed />
-                            </div>
-                        </div>
+                {/* How does it work? (Steps) */}
+                <section>
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl font-bold text-gray-900">How It Works</h2>
                     </div>
-                </motion.div>
+                    <div className="grid md:grid-cols-3 gap-8">
+                        {[
+                            { step: "01", title: "Select Your Habits", desc: "Choose from Sunnah-inspired habits or create your own custom routine." },
+                            { step: "02", title: "Track Every Day", desc: "Log your prayers and habits daily to build your streak and earn consistency points." },
+                            { step: "03", title: "Watch Your Iman Grow", desc: "Unlock achievements and view detailed analytics on your spiritual progress." }
+                        ].map((item, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: i * 0.2 }}
+                                className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative overflow-hidden"
+                            >
+                                <div className="text-6xl font-black text-gray-100 absolute -top-4 -right-4 select-none">{item.step}</div>
+                                <h3 className="text-xl font-bold text-gray-900 mb-4 relative z-10">{item.title}</h3>
+                                <p className="text-gray-600 relative z-10">{item.desc}</p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </section>
+
+                {/* Unique Features */}
+                <section className="bg-white rounded-3xl p-8 md:p-12 shadow-lg">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl font-bold text-gray-900">Unique Features</h2>
+                    </div>
+                    <div className="grid md:grid-cols-2 gap-8">
+                        {[
+                            { icon: CheckCircle, title: "RPG Leveling System", desc: "Level up your character stats like 'Discipline' and 'Knowledge' based on real-world actions." },
+                            { icon: Mic, title: "Ayah Echo", desc: "A specialized tool for memorizing Quran on the go using audio looping and repetition." },
+                            { icon: Book, title: "Private Journal", desc: "A secure, digital space to reflect on verses and your daily state of heart." },
+                            { icon: Star, title: "Privacy First", desc: "Your data is yours. We prioritize local-first storage options and strict privacy." }
+                        ].map((feat, i) => (
+                            <div key={i} className="flex items-start">
+                                <div className="bg-blue-50 p-3 rounded-lg mr-4 text-blue-600">
+                                    <feat.icon size={24} />
+                                </div>
+                                <div>
+                                    <h3 className="text-lg font-bold text-gray-900 mb-2">{feat.title}</h3>
+                                    <p className="text-gray-600 text-sm">{feat.desc}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                {/* Final CTA */}
+                <div className="transform scale-90 md:scale-100">
+                    <SignUpCard />
+                </div>
             </div>
         </div>
     );

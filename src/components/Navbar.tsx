@@ -53,7 +53,7 @@ export default function Navbar() {
                         ))}
                         <Link
                             to="/sign-up"
-                            className="px-4 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 flex items-center space-x-2"
+                            className="px-4 py-2 bg-gradient-to-r from-blue-600 to-teal-500 text-white rounded-lg font-medium hover:opacity-90 transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 flex items-center space-x-2"
                         >
                             <Star size={18} />
                             <span>Early Access</span>

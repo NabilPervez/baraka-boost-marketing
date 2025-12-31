@@ -36,7 +36,7 @@ export default function Donation() {
                                         key={item.amount}
                                         href={item.link}
                                         variant='outline'
-                                        className="bg-white border-2 border-gray-200 hover:border-blue-500 hover:bg-blue-50 text-xl font-bold text-gray-700 hover:text-blue-700 py-4 h-auto rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        className="bg-white border-2 border-gray-200 hover:border-transparent hover:bg-gradient-to-r hover:from-blue-600 hover:to-teal-500 hover:text-white text-xl font-bold text-gray-700 py-4 h-auto rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                     >
                                         {item.amount}
                                     </Button>
@@ -62,12 +62,12 @@ export default function Donation() {
                             {
                                 icon: Globe,
                                 title: "Server Costs",
-                                desc: "Keeping the app fast, reliable, and accessible to users in 150+ countries."
+                                desc: "Keeping the app fast, reliable, and accessible to users."
                             },
                             {
                                 icon: Users,
                                 title: "Community Features",
-                                desc: "Developing social features to connect Muslims and encourage group challenges."
+                                desc: "Developing social features to connect Muslims."
                             },
                             {
                                 icon: Coffee,
@@ -75,13 +75,20 @@ export default function Donation() {
                                 desc: "Allowing our team to dedicate more hours to coding, bug fixing, and support."
                             }
                         ].map((item, i) => (
-                            <div key={i} className="text-center p-6">
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: i * 0.2 }}
+                                className="text-center p-6"
+                            >
                                 <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6 text-blue-600">
                                     <item.icon size={32} />
                                 </div>
                                 <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
                                 <p className="text-gray-600">{item.desc}</p>
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
                 </div>
