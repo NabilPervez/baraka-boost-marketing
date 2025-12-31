@@ -16,21 +16,20 @@ export default function NewsletterEmbed() {
     }, []);
 
     return (
-        <div className="w-full flex justify-center py-4">
+        <div className="w-full flex justify-center items-center overflow-hidden">
             <iframe
                 src="https://subscribe-forms.beehiiv.com/f9935cc6-3353-4240-95a0-4c0f351500ec"
-                className="beehiiv-embed"
                 data-test-id="beehiiv-embed"
                 frameBorder="0"
                 scrolling="no"
                 style={{
-                    width: '560px',
-                    height: '207px',
+                    width: '100%',
+                    height: '250px',
                     margin: '0',
                     borderRadius: '0px',
                     backgroundColor: 'transparent',
-                    boxShadow: 'none',
-                    maxWidth: '100%',
+                    border: 'none',
+                    overflow: 'hidden'
                 }}
             />
         </div>
